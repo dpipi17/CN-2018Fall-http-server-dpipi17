@@ -137,7 +137,7 @@ class WorkerForClient(threading.Thread):
                     header += 'ETag: ' + str(currResponse.__hash__()) + ' \r\n'
                     header += 'Accept-Ranges: bytes\r\n'
                     header += 'Connection: keep-alive\r\n'
-                    header += 'Keep-Alive: 5\n\n'
+                    header += 'Keep-Alive: timeout=5\n\n'
 
                 except Exception as e:
                     print(e)
